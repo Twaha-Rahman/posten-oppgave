@@ -3,6 +3,11 @@
     margin: auto;
 }
 
+.main-left > ul > li > p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
 .main-right {
     grid-area: "main-right"; 
 }
