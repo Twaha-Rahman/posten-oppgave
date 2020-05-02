@@ -15,12 +15,12 @@ function App() {
         <NavBar />
       </header>
       <main className="grid-container">
-        <div className="main-left">
+        <section className="main-left">
           <Tracking />
-        </div>
-        <div className="main-right">
+        </section>
+        <section className="main-right">
           <img src={mainImg} alt="" />
-        </div>
+        </section>
       </main>
     </>
   );
