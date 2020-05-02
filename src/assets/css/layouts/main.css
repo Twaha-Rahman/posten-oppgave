@@ -1,0 +1,12 @@
+.main-left {
+    grid-area: "main-left";
+    margin: auto;
+}
+
+.main-right {
+    grid-area: "main-right"; 
+}
+
+.main-right > img {
+    max-width: 100%;
+}

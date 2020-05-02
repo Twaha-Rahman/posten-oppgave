@@ -1,0 +1,9 @@
+
+.tracking {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracking > li  {
+    list-style: none;
+}

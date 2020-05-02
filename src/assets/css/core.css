@@ -22,8 +22,10 @@
  * Components are re-usable across the project
  * Components are independent
  */
-@import './components/hamburger-menu.css';
-@import './components/logo.css';
+ @import './components/circle.css';
+ @import './components/hamburger-menu.css';
+ @import './components/input.css';
+ @import './components/logo.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here

@@ -2,17 +2,27 @@ import React from 'react';
 import "./assets/css/core.css";
 
 // Components
-import NavBar from './components/Navbar/NavBar.component'
+import NavBar from './components/navbar/NavBar.component';
+import Tracking from './components/tracking/tracking.component';
+
+// image
+import mainImg from './assets/img/posten-lady.png';
 
 function App() {
   return (
-    <div className="grid-container">
+    <>
       <header className="header">
         <NavBar />
       </header>
-      <main className="main">
+      <main className="grid-container">
+        <div className="main-left">
+          <Tracking />
+        </div>
+        <div className="main-right">
+          <img src={mainImg} alt="" />
+        </div>
       </main>
-    </div>
+    </>
   );
 }
 

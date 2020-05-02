@@ -1,0 +1,29 @@
+input[type=text] {
+  padding: 10px 5px;
+  margin: 8px 0;
+  border: 1px solid black;
+}
+
+input[type=text]:focus {
+  padding: 10px 5px;
+  margin: 8px 0;
+  border: 1px solid black;
+}
+
+input[type=submit] {
+    width: 5vw;
+    height: 2.35rem;
+    background: #FDBB2F;
+    border: 1px solid black;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    width: 5rem;
+    height: 2.35rem;
+    background: rgb(255, 174, 0);
+    border: 1px solid black;
+}
+
+
+
