@@ -1,1 +1,11 @@
 @import "./../abstract/color-variables.css";
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+nav > * {
+    margin: 8px 10rem;
+}

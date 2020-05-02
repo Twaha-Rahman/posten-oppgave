@@ -22,14 +22,13 @@
  * Components are re-usable across the project
  * Components are independent
  */
-@import './components/container.css';
-@import './components/lines.css';
+@import './components/hamburger-menu.css';
+@import './components/logo.css';
 
 /* LAYOUTS 
  * Unique combinations of components and base styles are imported here
  * Each stylesheet contains all component style overrides, and specific layout only attributes
  */
-@import './layouts/aside.css';
 @import './layouts/body.css';
 @import './layouts/grid.css';
 @import './layouts/main.css';
