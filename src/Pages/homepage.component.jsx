@@ -20,10 +20,11 @@ const HomePage = () => {
 
     const [data, setData] = useState([]);
     const [dataFetchSuccess, setDataFetchSuccess] = useState(false);
-    const [errorMsg, setErrorMsg] = useState('erooo');
+    const [errorMsg, setErrorMsg] = useState('');
 
     const searchValue = async (input) => {
         const sporingsData = await fetchData(input);
+
 
         if (sporingsData.consignmentSet[0].error) {
             setDataFetchSuccess(false)
@@ -34,20 +35,20 @@ const HomePage = () => {
             }
         } else {
             setDataFetchSuccess(true);
-            const x = Object.entries(sporingsData);
-
-            for (const data in x) {
-                console.log(data);
-            }
-            setData(x[0][1][0].consignmentId);
+            const getData = (sporingsData.consignmentSet.map(shipment => {
+                return {
+                    package: shipment.packageSet,
+                }
+            }))
+            getData[0].package.map(el => setData(el))
         }
     }
-
     return (
         <main className="grid-container">
             <section className="main-left">
 
                 <Search
+                    errMsg={dataFetchSuccess ? 'TESTPACKAGE-AT-PICKUPPOINT' : errorMsg}
                     searchValue={searchValue}
                 />
                 {dataFetchSuccess ? <Result msg={data} /> : errorMsg}

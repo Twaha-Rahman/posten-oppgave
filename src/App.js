@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./assets/css/core.css";
 
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
@@ -8,7 +8,6 @@ import NavBar from './components/navbar/NavBar.component';
 import HomePage from './Pages/homepage.component';
 
 function App() {
-  const [data, setData] = useState([])
 
   return (
     <Router>

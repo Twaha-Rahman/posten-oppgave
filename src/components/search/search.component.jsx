@@ -16,7 +16,7 @@ const Search = ({ searchValue, errMsg }) => {
                 <h1>TRACKING PACKAGES</h1>
             </li>
             <li>
-                <p>TESTPACKAGE-AT-PICKUPPOINT</p>
+                <p>{errMsg}</p>
             </li>
             <li>
                 <form onSubmit={handleSubmit}>
