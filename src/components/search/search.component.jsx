@@ -1,21 +1,13 @@
 import React, { useState } from 'react'
 
-const Search = () => {
-
-    const fetchData = async (input) => {
-        const res = await fetch(`https://sporing.posten.no/sporing.json?q=${input}`);
-        const data = res.json();
-        return data;
-    }
-
-    const [value, setValue] = useState('')
+const Search = ({ searchValue }) => {
+    const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!value) return;
-        fetchData(value)
-            .then(res => console.log(res.consignmentSet[0]))
-            .catch(err => console.log(err))
+        searchValue(value)
+        setValue('');
     }
 
     return (
