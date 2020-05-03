@@ -17,7 +17,6 @@ function App() {
       </header>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route exact path='/result' component={HomePage} />
       </Switch>
 
     </Router>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Search = ({ searchValue }) => {
+const Search = ({ searchValue, errMsg }) => {
     const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {

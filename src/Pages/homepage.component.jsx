@@ -5,27 +5,52 @@ import Search from '../components/search/search.component';
 
 // image
 import mainImg from './../assets/img/posten-lady.png';
+import Result from './result.component';
 
 const HomePage = () => {
     const fetchData = async (input) => {
-        const res = await fetch(`https://sporing.posten.no/sporing.json?q=${input}`);
-        const data = res.json();
-        return data;
+        try {
+            const res = await fetch(`https://sporing.posten.no/sporing.json?q=${input}`);
+            const data = await res.json();
+            return data;
+        } catch (err) {
+            console.log(err);
+        }
     }
 
-    const [data, setData] = useState(fetchData, '')
+    const [data, setData] = useState([]);
+    const [dataFetchSuccess, setDataFetchSuccess] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('erooo');
 
-    const searchValue = (input) => {
-        const newValue = [...data, { input }];
-        setData(newValue)
+    const searchValue = async (input) => {
+        const sporingsData = await fetchData(input);
+
+        if (sporingsData.consignmentSet[0].error) {
+            setDataFetchSuccess(false)
+            if (sporingsData.consignmentSet[0].error.code === 400) {
+                setErrorMsg('feil 400')
+            } else if (sporingsData.consignmentSet[0].error.code === 404) {
+                setErrorMsg('feil 400004');
+            }
+        } else {
+            setDataFetchSuccess(true);
+            const x = Object.entries(sporingsData);
+
+            for (const data in x) {
+                console.log(data);
+            }
+            setData(x[0][1][0].consignmentId);
+        }
     }
 
     return (
         <main className="grid-container">
             <section className="main-left">
+
                 <Search
                     searchValue={searchValue}
                 />
+                {dataFetchSuccess ? <Result msg={data} /> : errorMsg}
             </section>
             <section className="main-right">
                 <img src={mainImg} alt="" />
