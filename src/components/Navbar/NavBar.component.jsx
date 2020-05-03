@@ -6,7 +6,7 @@ const NavBar = () => {
         <nav className="nav">
             <img src={Logo} alt="posten" className="logo" />
             <div className="circle">
-                <i class="fas fa-bars fa-2x"></i>
+                <i className="fas fa-bars fa-2x"></i>
             </div>
         </nav>
     );
