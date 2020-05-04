@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-const Result = ({ data }) => {
+const Result = (props) => {
+  console.log(props.location.state); // here will be your data
 
-    return (
-        <div className="result-container">
-            <h1>Result Site</h1>
-            <p>{data.brand}</p>
-        </div>
-    )
-}
+  return (
+    <div className="result-container">
+      <h1>Result Site</h1>
+      <p>{props.location.state.brand}</p>
+    </div>
+  );
+};
 
 export default Result;
