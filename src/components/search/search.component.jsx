@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Search = ({ searchValue, errMsg }) => {
+const Search = ({ searchValue, msg }) => {
     const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
@@ -16,7 +16,7 @@ const Search = ({ searchValue, errMsg }) => {
                 <h1>TRACKING PACKAGES</h1>
             </li>
             <li>
-                <p>{errMsg}</p>
+                <p>{msg}</p>
             </li>
             <li>
                 <form onSubmit={handleSubmit}>

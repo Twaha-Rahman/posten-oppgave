@@ -6,6 +6,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 // Components
 import NavBar from './components/navbar/NavBar.component';
 import HomePage from './Pages/homepage.component';
+import Result from './Pages/result.component';
 
 function App() {
 

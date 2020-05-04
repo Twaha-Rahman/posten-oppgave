@@ -4,3 +4,12 @@
   grid-template-rows: 1fr;
   grid-template-areas:  "main-left" "main-right";
 }
+
+.result-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ".";
+    margin: auto;
+}

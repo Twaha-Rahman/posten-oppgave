@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Result = ({ msg }) => {
+const Result = ({ data }) => {
+
     return (
-        <>
-            <p>{msg.brand}</p>
-        </>
-
+        <div className="result-container">
+            <h1>Result Site</h1>
+            <p>{data.brand}</p>
+        </div>
     )
 }
 
