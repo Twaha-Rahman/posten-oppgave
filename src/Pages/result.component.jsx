@@ -6,7 +6,7 @@ const Result = (props) => {
   return (
     <div className="result-container">
       <h1>Result Site</h1>
-      <p>{props.location.state.brand}</p>
+      <p>{props.location.state.referrer.brand}</p>
     </div>
   );
 };
